@@ -29,15 +29,17 @@ jobs:
 
       - name: 'Syntax:Lab1'
         description: 'Action of Lab1 in Syntax section'
+        
+      inputs:
+        optionalField:
+          description: 'optionalField'
+          required: false
+          default: 'oo'
+        requiredField:
+          description: 'requiredField'
+          required: true
         runs:
           using: 'docker'
           image: 'docker://rancher/cowsay:latest'
 
-          inputs:
-          optionalField:
-            description: 'optionalField'
-            required: false
-            default: 'oo'
-          requiredField:
-            description: 'requiredField'
-            required: true
+    
